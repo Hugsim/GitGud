@@ -5,6 +5,8 @@ if (isset($_SESSION["loginT"]))
 {
     if($_SESSION["loginT"] === true)
     {
+        //mycket ändring
+        
 
 	$servername = "localhost";
     $username = "root";
