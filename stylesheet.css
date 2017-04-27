@@ -76,6 +76,7 @@ a.animated-button.sign-in:after {
 }
 a.animated-button.login {
 	border: 2px solid #D24D57;
+    width: 200px;/*proof of concept*/
 }
 a.animated-button.login:after {
 	background: #D24D57;
@@ -87,8 +88,8 @@ a.animated-button.login:after {
 }
 
 .button{
-    width: 100px;
-    height: 40px;
+    /*width: 150px;
+    height: 40px;*/
     display: inline;
     text-align: center;
     vertical-align: center;
