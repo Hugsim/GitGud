@@ -1,5 +1,7 @@
 body {
+	display: block;
     background-color: #353535;
+	width: 100%;
 }
 
 a.animated-button:link, a.animated-button:visited {
@@ -88,10 +90,20 @@ a.animated-button.login:after {
 	transform: translateX(-50%) translateY(-50%) rotate(25deg);
 }
 
-.button{
+.button {
     /*width: 150px;
     height: 40px;*/
     display: inline;
     text-align: center;
     vertical-align: center;
+}
+
+.image {
+	width: 10%;
+}
+
+.lastImages {
+	display: block;
+	width: 80%;
+	margin: auto;
 }
