@@ -1,4 +1,17 @@
 // Place your settings in this file to overwrite default and user settings.
 {
-    
+    "vscode-opn.perLang": {
+        "opnOptions": [{
+            "forLang": "html",
+            "openInApp": "chrome",
+            "isUseWebServer": true
+        }, 
+        {
+            "forLang": "php",
+            "openInApp": "chrome",
+            "isUseWebServer": true
+        }]
+    },
+    "vscode-opn.webServerHostname": "127.0.0.1",
+    "vscode-opn.webServerPort": 8080
 }
