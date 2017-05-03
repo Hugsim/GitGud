@@ -65,6 +65,7 @@ a.animated-button:link, a.animated-button:visited {
 
 a.animated-button.sign-in {
 	border: 2px solid #D24D57;
+	width: 150px
 }
 a.animated-button.sign-in:after {
 	background: #D24D57;
@@ -76,7 +77,7 @@ a.animated-button.sign-in:after {
 }
 a.animated-button.login {
 	border: 2px solid #D24D57;
-    width: 200px;/*proof of concept*/
+    width: 150px;/*proof of concept*/
 }
 a.animated-button.login:after {
 	background: #D24D57;
