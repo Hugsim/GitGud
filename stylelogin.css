@@ -20,15 +20,31 @@ form{
 form ul {
     list-style: none;
     margin: 0;
+    padding: 0px;
 }
 
 form ul li {
     margin-bottom: 10px;
+    
+}
+
+.input {
+    width: 90%;
+    margin-left: 5%;
 }
 
 ul li label {
     float: left;
-    width: 150px;
+    width: 100%;
     line-height: 24px;
     font-size: 20px;
+    text-align: center;
+    margin: auto;
+    color: #BDC3C7;
+}
+
+.button{
+    margin-left: 35%;
+    width: 30%;
+    height: 
 }
