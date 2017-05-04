@@ -61,7 +61,7 @@
 			}
 
 		?>
-		<p>Welcome </p>
+		<p>Welcome <?php echo $_SESSION["username"]?>!</p>
 	</body>
 </html>
 
