@@ -1,0 +1,28 @@
+body {
+	display: block;
+    background-color: #353535;
+	width: 100%;
+}
+
+.container{
+    margin: auto;
+}
+
+form{
+    display: block;
+}
+
+form ul {
+    list-style: none;
+    margin: 0;
+}
+
+form ul li {
+    margin-bottom: 10px;
+}
+
+ul li label {
+    float: left;
+    width: 150px;
+    line-height: 24px;
+}
