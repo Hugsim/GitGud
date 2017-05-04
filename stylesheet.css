@@ -91,7 +91,14 @@ a.animated-button.login:after {
 .button{
     /*width: 150px;
     height: 40px;*/
-    display: inline;
     text-align: center;
     vertical-align: center;
+	display: inline-block;
+}
+
+.button-row{
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin: auto;
 }
