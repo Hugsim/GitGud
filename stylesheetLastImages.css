@@ -1,15 +1,22 @@
 .image {
-	width: 10%;
+    border: 3px lightgray solid;
+    padding: 0px;
+	width: 30%;
+    height: auto;
 	float:left;
+    margin-left: 4.1%;
 }
 
-img {
-	width: 100px;
-	height: 100px;
+.image:first-child {
+    margin-left: 0;
+}
+
+.image img {
+	width: 100%;
 }
 
 .lastImages {
 	width: 80%;
-	margin:auto;
+	margin-left: 10%;
 	display: inline-block;
 }

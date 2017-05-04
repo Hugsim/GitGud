@@ -1,7 +1,6 @@
 body {
-	display: block;
     background-color: #353535;
-	width: 100%;
+	margin: 0px !important;
 }
 
 a.animated-button:link, a.animated-button:visited {
