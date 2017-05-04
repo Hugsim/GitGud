@@ -99,11 +99,17 @@ a.animated-button.login:after {
 
 .image {
 	width: 10%;
+	float:left;
+}
+
+img {
+	width: 100px;
+	height: 100px;
 }
 
 .lastImages {
-	display: block;
 	width: 80%;
+	margin:auto;
 	display: inline-block;
 }
 
