@@ -93,9 +93,9 @@ a.animated-button.login:after {
 .button {
     /*width: 150px;
     height: 40px;*/
-    display: inline;
     text-align: center;
     vertical-align: center;
+<<<<<<< HEAD
 }
 
 .image {
@@ -105,5 +105,14 @@ a.animated-button.login:after {
 .lastImages {
 	display: block;
 	width: 80%;
+=======
+	display: inline-block;
+}
+
+.button-row{
+	display: block;
+	width: 100%;
+	height: 100%;
+>>>>>>> 5ab8b00a8c09430c2aec4ee58fe6d2fd2aa0818b
 	margin: auto;
 }
