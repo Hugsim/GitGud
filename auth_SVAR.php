@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8"/>
         <link rel="stylesheet" href="stylesheet.css">
+		<link rel="stylesheet" href="styleauthsvar.css">
     </head>
     <body class="body">
 		<?php
@@ -37,13 +38,8 @@
 					if ($row["username"] == $_POST["user"] and $row["password"] == $_POST["pass"]) {
 						$_SESSION["username"] = $row["username"];
 						$_SESSION["password"] = $row["password"];
-						echo "Inloggad som: ";
-						echo $_SESSION["username"];
-						echo "<br>";
-						echo "<a href='sida1.php'>Sida1</a><br>";
-						echo "<a href='sida2.php'>Sida2</a><br>";
-						echo "<a href='sida3.php'>Sida3</a><br>";
-						echo "<a href='logout.php'>Logga ut!</a> <br>";
+						echo '<p class="welcome">Welcome ' . $_SESSION["username"]. '!</p>';
+						echo '<a href="logout.php">Logga ut!</a>';
 						$loginT = true;
 						$_SESSION["loginT"] = true;
 					}
@@ -59,9 +55,9 @@
 				echo "Wrong login information!";
 			session_unset();
 			}
-
+		
 		?>
-		<p>Welcome <?php echo $_SESSION["username"]?>!</p>
+		
 	</body>
 </html>
 
