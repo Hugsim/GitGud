@@ -1,0 +1,15 @@
+.image {
+	width: 10%;
+	float:left;
+}
+
+img {
+	width: 100px;
+	height: 100px;
+}
+
+.lastImages {
+	width: 80%;
+	margin:auto;
+	display: inline-block;
+}

@@ -97,22 +97,6 @@ a.animated-button.login:after {
     vertical-align: center;
 }
 
-.image {
-	width: 10%;
-	float:left;
-}
-
-img {
-	width: 100px;
-	height: 100px;
-}
-
-.lastImages {
-	width: 80%;
-	margin:auto;
-	display: inline-block;
-}
-
 .button-row{
 	display: block;
 	width: 100%;
