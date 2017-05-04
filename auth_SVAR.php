@@ -11,7 +11,7 @@ if (!isset($_POST["user"]) or !isset($_POST["pass"]))
 	$servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "sessions";
+    $dbname = "bildr";
 
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -20,7 +20,7 @@ if (!isset($_POST["user"]) or !isset($_POST["pass"]))
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "SELECT username, password, authlvl FROM userdata";
+    $sql = "SELECT username, password FROM userdata";
     $result = $conn->query($sql);
 
     $loginT = false;
@@ -33,7 +33,6 @@ if (!isset($_POST["user"]) or !isset($_POST["pass"]))
 	        if ($row["username"] == $_POST["user"] and $row["password"] == $_POST["pass"]) {
 	            $_SESSION["username"] = $row["username"];
 	    		$_SESSION["password"] = $row["password"];
-	    		$_SESSION["authlvl"] = $row["authlvl"];
 	    		echo "Inloggad som: ";
 	    		echo $_SESSION["username"];
 	    		echo "<br>";
