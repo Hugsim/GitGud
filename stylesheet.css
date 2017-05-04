@@ -1,6 +1,6 @@
 body {
     background-color: #353535;
-	margin: 0px !important;
+	margin: 0px;
 }
 
 a.animated-button:link, a.animated-button:visited {
@@ -90,8 +90,6 @@ a.animated-button.login:after {
 }
 
 .button {
-    /*width: 150px;
-    height: 40px;*/
     text-align: center;
     vertical-align: center;
 }
