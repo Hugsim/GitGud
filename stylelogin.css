@@ -5,20 +5,22 @@ body {
 }
 
 .container{
-    margin: auto;
+
 }
 
 form{
-    display: block;
+    margin-left: 25%;
+    margin-right:25%;
+    width: 50%;
 }
 
 form ul {
     list-style: none;
-    margin: 0;
 }
 
 form ul li {
     margin-bottom: 10px;
+    width: 50px;
 }
 
 ul li label {
