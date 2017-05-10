@@ -38,8 +38,14 @@
 					if ($row["username"] == $_POST["user"] and $row["password"] == $_POST["pass"]) {
 						$_SESSION["username"] = $row["username"];
 						$_SESSION["password"] = $row["password"];
-						echo '<p class="welcome">Welcome ' . $_SESSION["username"]. '!</p>';
 						echo '<a href="logout.php">Logga ut!</a>';
+						echo '<p class="welcome">Welcome ' . $_SESSION["username"]. '!</p>';
+						echo '
+							<div class="button-row">
+            					<div class="button"> <a href="signup.html" class="animated-button sign-in">Privata Bilder</a> </div>
+            					<div class="button"> <a href="login.html" class="animated-button login ">Public bilder</a> </div>
+        					</div>
+							';
 						$loginT = true;
 						$_SESSION["loginT"] = true;
 					}
