@@ -28,7 +28,10 @@
 			$sql = "SELECT userid, username, password FROM userdata";
 			$result = $conn->query($sql);
 
+            $newuserid = base_convert(rand(0, 1679615), 10, 36);//makes new user id
+
 			$duplicate = false;
+            $okuserdata = false;
             $userids = array();//alla user ids
 
 			if ($result === false) {
@@ -38,22 +41,45 @@
 				while($row = $result->fetch_assoc()) {
 					if ($row["username"] == $_POST["user"]) {
 						$duplicate = true;
-                        
 					}
                     array_push($userids, $row["userid"]);
 				}
-                while
-				if (!$duplicate) {
-					echo "Acepteble userdata!";
-					$sql = "INSERT INTO userdata (`userid`, `username`, `password`, `mail`) VALUES (,'". $_POST["user"] ."', '". $_POST["pass"] ."', '". $_POST["email"] ."')"; //to do, make säker, förklara vad du vill göra /hugo
-			        $result = $conn->query($sql);					
+                $newuserid = checkuserid($userids, $newuserid);
+                //echo $newuserid;
+                if($_POST["pass"] == $_POST["pass2"]){
+                    echo "Dina lösenord stämmer inte överens! ";
+                    echo '<a href="signup.html">Testa igen här</a>';
+                }
+                elseif (!$duplicate) {
+                    echo " Det funka!";
+                    $sql = "INSERT INTO userdata VALUES ('".$newuserid."','". $_POST["user"] ."', '". $_POST["pass"] ."', '". $_POST["email"] ."');"; //to do, make säker, förklara vad du vill göra /hugo
+                    $result = $conn->query($sql);
+                    //mysqli_query($conn, $sql);
+                    echo "Användaren '".$_POST["user"]."' finns nu i databasen! ";
+                    echo '<a href="login.html">Logga in här!</a>';
 				}
+                else{
+                    echo "Användarnamn upptaget!  ";
+                    echo '<a href="signup.html">Testa igen här</a>';
+                }
+				
 			}
 				
 			else {
 				echo "Wrong login information!";
 			session_unset();
 			}
+            function checkuserid($db, $co){
+                foreach ($db as $key => $value){
+                    if ($value == $co){
+                        $newuserid = base_convert(rand(0, 1679615), 10, 36);
+                        checkuserid($userids, $newuserid);
+                    }
+                    else{
+                        return $co;
+                    }
+                }
+            }
 		
 		?>
 		
