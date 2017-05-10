@@ -4,4 +4,6 @@ Rob: Hej hugo
 
 Hugo: Vad nödvändigt.
 
-Rob: halloj
+Rob: 
+
+Hug: http://php.net/manual/en/function.base-convert.php
