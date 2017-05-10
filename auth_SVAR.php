@@ -10,7 +10,7 @@
 		session_start();
 		if (!isset($_POST["user"]) or !isset($_POST["pass"]))
 		{
-			header("Location: auth.html");
+			header("Location: login.html");
 			die();
 		}
 			$servername = "localhost";
