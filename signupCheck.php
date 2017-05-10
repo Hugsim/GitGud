@@ -10,7 +10,7 @@
 		session_start();
 		if (!isset($_POST["user"]) or !isset($_POST["pass"]))
 		{
-			header("Location: login.html");
+			header("Location: signup.html");
 			die();
 		}
 			$servername = "localhost";
@@ -28,32 +28,21 @@
 			$sql = "SELECT username, password FROM userdata";
 			$result = $conn->query($sql);
 
-			$loginT = false;
+			$duplicate = false;
 
 			if ($result === false) {
 				die(mysqli_error($conn)); 
 			}
 			elseif ($result->num_rows > 0) {
 				while($row = $result->fetch_assoc()) {
-					if ($row["username"] == $_POST["user"] and $row["password"] == $_POST["pass"]) {
-						$_SESSION["username"] = $row["username"];
-						$_SESSION["password"] = $row["password"];
-						echo '<a href="logout.php">Logga ut!</a>';
-						echo '<p class="welcome">Welcome ' . $_SESSION["username"]. '!</p>';
-						echo '
-							<div class="button-row">
-            					<div class="button"> <a href="signup.html" class="animated-button sign-in">Privata Bilder</a> </div>
-            					<div class="button"> <a href="login.html" class="animated-button login ">Public bilder</a> </div>
-        					</div>
-							';
-						$loginT = true;
-						$_SESSION["loginT"] = true;
+					if ($row["username"] == $_POST["user"]) {
+						$duplicate = true;
 					}
 				}
-				if (!$loginT) {
-					echo "Wrong login!";
-					$_SESSION["loginT"] = false;
-					session_unset();
+				if (!$duplicate) {
+					echo "Acepteble userdata!";
+					$sql = "INSERT INTO userdata (`userid`, `username`, `password`, `mail`) VALUES (, , ,)"; //to do, make säker, förklara vad du vill göra /hugo
+			        $result = $conn->query($sql);					
 				}
 			}
 				
