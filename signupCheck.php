@@ -25,10 +25,11 @@
 				die("Connection failed: " . $conn->connect_error);
 			}
 
-			$sql = "SELECT username, password FROM userdata";
+			$sql = "SELECT userid, username, password FROM userdata";
 			$result = $conn->query($sql);
 
 			$duplicate = false;
+            $userids = array();//alla user ids
 
 			if ($result === false) {
 				die(mysqli_error($conn)); 
@@ -37,11 +38,14 @@
 				while($row = $result->fetch_assoc()) {
 					if ($row["username"] == $_POST["user"]) {
 						$duplicate = true;
+                        
 					}
+                    array_push($userids, $row["userid"]);
 				}
+                while
 				if (!$duplicate) {
 					echo "Acepteble userdata!";
-					$sql = "INSERT INTO userdata (`userid`, `username`, `password`, `mail`) VALUES (, , ,)"; //to do, make säker, förklara vad du vill göra /hugo
+					$sql = "INSERT INTO userdata (`userid`, `username`, `password`, `mail`) VALUES (,'". $_POST["user"] ."', '". $_POST["pass"] ."', '". $_POST["email"] ."')"; //to do, make säker, förklara vad du vill göra /hugo
 			        $result = $conn->query($sql);					
 				}
 			}
