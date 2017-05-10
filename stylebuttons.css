@@ -115,9 +115,9 @@ a.animated-button.login:after {
 
 .logo {
 	position:absolute;
-	height:50px;
+	height:80px;
 	width:auto;
 
-	left:0;
-	right:0;
+	top:5px;
+	left:5px;
 }
