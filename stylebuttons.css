@@ -68,9 +68,9 @@ a.animated-button:link, a.animated-button:visited {
 
 a.animated-button.sign-in {
 	border: 2px solid #D24D57;
-	width:100%;
+	width:20%;
 	float:left;
-	left:20%;
+	left:40%;
 }
 a.animated-button.sign-in:after {
 	background: #D24D57;
@@ -82,9 +82,9 @@ a.animated-button.sign-in:after {
 }
 a.animated-button.login {
 	border: 2px solid #D24D57;	
-	width:100%;
-	left: 60%;
+	width:20%;
 	float:left;
+	left:40%;
 }
 a.animated-button.login:after {
 	background: #D24D57;
@@ -96,10 +96,14 @@ a.animated-button.login:after {
 }
 
 .button {
+	position:absolute;
     text-align: center;
-	display:block;
-	width: 20%;
-	margin-left: 20%;
+	display:inline-block;
+	width: 50%;
+}
+
+.button:nth-child(2) {
+	left:50%;
 }
 
 .button-row{
@@ -107,4 +111,13 @@ a.animated-button.login:after {
 	width: 100%;
 	height: 100px;
 	margin: auto;
+}
+
+.logo {
+	position:absolute;
+	height:50px;
+	width:auto;
+
+	left:0;
+	right:0;
 }
