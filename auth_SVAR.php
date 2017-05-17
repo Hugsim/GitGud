@@ -4,6 +4,7 @@
         <meta charset="utf-8"/>
         <link rel="stylesheet" href="stylebuttons.css">
 		<link rel="stylesheet" href="styleauthsvar.css">
+		<script type = "text/javascript" src = "script1.js"></script>
     </head>
     <body class="body">
 		<?php
@@ -46,7 +47,7 @@
 							<div class="button-row">
             					<div class="button"> <a href="signup.html" class="animated-button sign-in">Privata Bilder</a> </div>
             					<div class="button"> <a href="login.html" class="animated-button login ">Public bilder</a> </div>
-								<div class="button"> <a href="upload.php" class="animated-button upload ">Ladda upp</a> </div>
+								<div class="button"> <a href="#" class="animated-button upload ">Ladda upp</a> </div>
 								<div class="button"> <a href="logout.php" class="animated-button logout ">Logga ut</a> </div>
         					</div>
 							';
