@@ -18,8 +18,6 @@
 			$password = "";
 			$dbname = "bildr";
 
-		
-
 			// Create connection
 			$conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -39,7 +37,7 @@
 			}
 			elseif ($result->num_rows > 0) {
 				while($row = $result->fetch_assoc()) {
-					if ($row["username"] == $_POST["user"] and $row["password"] == $_POST["pass"]) {
+					if (strtolower($row["username"]) == strtolower($_POST["user"]) and $row["password"] == $_POST["pass"]) {
 						$_SESSION["username"] = $row["username"];
 						$_SESSION["password"] = $row["password"];
 						echo '<a href="logout.php">Logga ut!</a>';
