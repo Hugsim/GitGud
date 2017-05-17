@@ -25,6 +25,8 @@
 				die("Connection failed: " . $conn->connect_error);
 			}
 
+			$conn->set_charset("utf8");
+
 			$sql = "SELECT userid, username, password FROM userdata";
 			$result = $conn->query($sql);
 

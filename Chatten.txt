@@ -7,3 +7,7 @@ Hugo: Vad nödvändigt.
 Rob: 
 
 Hug: http://php.net/manual/en/function.base-convert.php
+
+Rob: http://codepen.io/sazzad/pen/yNNNJG
+
+Rob: ATT GÖRA: Fixa case-insensitive inloggning på användarnamn
