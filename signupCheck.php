@@ -41,7 +41,7 @@
 			}
 			elseif ($result->num_rows > 0) {
 				while($row = $result->fetch_assoc()) {
-					if (strtolower($row["username"]) == strtolower($_POST["user"]) {
+					if (strtolower($row["username"]) == strtolower($_POST["user"])) {
 						$duplicate = true;
 					}
                     array_push($userids, $row["userid"]);
