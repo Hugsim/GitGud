@@ -46,7 +46,7 @@
 				}
                 $newuserid = checkuserid($userids, $newuserid);
                 //echo $newuserid;
-                if($_POST["pass"] == $_POST["pass2"]){
+                if($_POST["pass"] != $_POST["pass2"]){
                     echo "Dina lösenord stämmer inte överens! ";
                     echo '<a href="signup.html">Testa igen här</a>';
                 }
@@ -62,7 +62,7 @@
                     echo "Användarnamn upptaget!  ";
                     echo '<a href="signup.html">Testa igen här</a>';
                 }
-				
+
 			}
 				
 			else {
@@ -82,7 +82,7 @@
             }
 		
 		?>
-		
+z		
 	</body>
 </html>
 
