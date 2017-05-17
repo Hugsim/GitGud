@@ -51,7 +51,7 @@
 								<div class="button"> <a href="logout.php" class="animated-button logout ">Logga ut</a> </div>
         					</div>
 							';
-						echo '<form action="imgUpload.php" class="form">
+						echo '<form action="upload.php" class="form">
                       		<input type="file" name="pic" accept="image/*">
                       		<input type="submit">
                   		</form>';
