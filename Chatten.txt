@@ -13,3 +13,5 @@ Rob: http://codepen.io/sazzad/pen/yNNNJG
 Rob: ATT GÖRA: Fixa case-insensitive inloggning på användarnamn
 
 Jan: bla bla bla.....
+
+Jan: WOW! Vilken möjlighet!!!!!!11
