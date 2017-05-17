@@ -8,3 +8,38 @@ body{
     text-align: center;
     color: #BDC3C7;
 }
+
+.button {
+	position:absolute;
+    text-align: center;
+	display:inline-block;
+	width: 50%;
+}
+
+.button-row{
+	display: block;
+	width: 80%;
+	height: 100px;
+	margin: auto;
+}
+
+.sign-in {
+	left:0%;
+}
+
+.login {
+	left:50%;
+}
+
+.upload {
+	left:50%;
+}
+
+.logout {
+	left:70%;
+}
+
+.animated-button{
+    float: left;
+    width: 20%;
+}
