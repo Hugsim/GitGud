@@ -50,3 +50,7 @@ div a {
     margin-left: 35%;
     display: none;   
 }
+
+.form:target{
+    display: block;
+}

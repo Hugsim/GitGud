@@ -9,7 +9,7 @@
     <body class="body">
 		<?php
 		session_start();
-		if (!isset($_POST["user"]) or !isset($_POST["pass"]))
+		if ((!isset($_POST["user"]) or !isset($_POST["pass"]))) //&& !$_SESSION["loginT"] )
 		{
 			header("Location: login.html");
 			die();
@@ -47,11 +47,11 @@
 							<div class="button-row">
             					<div class="button"> <a href="signup.html" class="animated-button sign-in">Privata Bilder</a> </div>
             					<div class="button"> <a href="login.html" class="animated-button login ">Public bilder</a> </div>
-								<div class="button"> <a href="#" class="animated-button upload ">Ladda upp</a> </div>
+								<div class="button"> <a href="#upload" class="animated-button upload ">Ladda upp</a> </div>
 								<div class="button"> <a href="logout.php" class="animated-button logout ">Logga ut</a> </div>
         					</div>
 							';
-						echo '<form action="upload.php" class="form">
+						echo '<form action="upload.php" id="upload" class="form">
                       		<input type="file" name="pic" accept="image/*">
                       		<input type="submit">
                   		</form>';
