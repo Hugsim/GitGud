@@ -28,7 +28,7 @@
 				die("Connection failed: " . $conn->connect_error);
 			}
 
-			$sql = "SELECT username, password FROM userdata";
+			$sql = "SELECT username, password, userid FROM userdata";
 			$result = $conn->query($sql);
 
 			$loginT = false;
@@ -41,6 +41,7 @@
 					if (strtolower($row["username"]) == strtolower($_POST["user"]) and $row["password"] == $_POST["pass"]) {
 						$_SESSION["username"] = $row["username"];
 						$_SESSION["password"] = $row["password"];
+						$_SESSION["userid"] = $row["userid"];
 						echo '<a href="logout.php">Logga ut!</a>';
 						echo '<p class="welcome">Welcome ' . $_SESSION["username"]. '!</p>';
 						echo '
@@ -51,8 +52,27 @@
 								<div class="button"> <a href="logout.php" class="animated-button logout ">Logga ut</a> </div>
         					</div>
 							';
-						echo '<form action="upload.php" id="upload" class="form">
-                      		<input type="file" name="pic" accept="image/*">
+						echo '<form action="upload.php" id="upload" class="form" method="post">
+								<ul>
+									<li>
+										<label>Välj fil:</label>
+										<input type="file" name="pic" accept="image/*">
+									</li>
+									<li>
+										<label>Titel:</label>
+										<input type="text" name="title">
+									</li>
+									<li class="inline">
+										<label class="inline">Private:</label>
+										<input class="inline" type="radio" name="radio" value="true"> 
+										<label class="inline">Public:</label>
+										<input class="inline" type="radio" name="radio" value="false"> 
+									</li>
+									<li>
+										<label>Description:</label>
+										<input type="text" name="description">
+									</li>
+								</ul>
                       		<input type="submit">
                   		</form>';
 						$loginT = true;

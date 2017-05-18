@@ -48,7 +48,39 @@ div a {
 .form{
     width: 30%;
     margin-left: 35%;
+    border: 2px solid #D24D57;
     display: none;   
+}
+
+form ul {
+    list-style: none;
+    margin: 0;
+    padding: 0px;
+}
+
+form ul li {
+    margin-bottom: 10px;
+}
+
+input {
+    width: 50%;
+    margin-left: 25%;
+}
+
+ul li label {
+    float: left;
+    width: 100%;
+    line-height: 24px;
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    color: #BDC3C7;
+}
+
+.inline {
+    display: inline-block;
+    width: 70%;
+    margin-left: 15%;
 }
 
 .form:target{
