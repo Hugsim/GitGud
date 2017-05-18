@@ -49,6 +49,10 @@
 				}
 			}
 		}
+		if (!isset($_SESSION["loginT"])){
+			header("Location: login.html");
+			die();
+		}
 				if ($_SESSION["loginT"])
 				{
 					$loginT = true;
