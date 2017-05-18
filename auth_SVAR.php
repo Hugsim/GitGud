@@ -33,6 +33,7 @@
 			$result = $conn->query($sql);
 
 			$loginT = false;
+			$_SESSION["loginT"] = false;
 
 			if ($result === false) {
 				die(mysqli_error($conn)); 
@@ -46,6 +47,11 @@
 						$loginT = true;
 						$_SESSION["loginT"] = true;
 					}
+				}
+				if(!$loginT){
+					echo "<h2>Fel inloggnigsuppgifter</h2> <br>";
+					echo '<a href="login.html"><h2>Logga in igen!</h2></a>';
+					$_SESSION["loginT"] = false;
 				}
 			}
 		}
