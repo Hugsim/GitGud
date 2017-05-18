@@ -52,7 +52,7 @@
 								<div class="button"> <a href="logout.php" class="animated-button logout ">Logga ut</a> </div>
         					</div>
 							';
-						echo '<form action="upload.php" id="upload" class="form" method="post">
+						echo '<form action="upload.php" id="upload" class="form" method="post" enctype="multipart/form-data">
 								<ul>
 									<li>
 										<label>Välj fil:</label>
