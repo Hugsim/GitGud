@@ -12,6 +12,8 @@ function logout(){
     session_start();
     echo "Du har loggat ut!<br>";
     echo '<a href="login.html">Logga in igen!</a>';
+    echo "<h2>Du har loggat ut!</h2><br>";
+    echo '<a href="login.html"><h2>Logga in igen!</h2></a>';
     header('HTTP/1.1 401 Unauthorized'); //själva "utloggningen", alltså omdirigerad till en 401 sida
     session_unset();
     session_destroy();
