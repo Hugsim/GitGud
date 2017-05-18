@@ -17,3 +17,5 @@ Jan: bla bla bla.....
 Jan: WOW! Vilken möjlighet!!!!!!11
 
 Hug: https://www.w3schools.com/php/php_file_upload.asp för filuppladdning
+
+Rob: <img class="logo" src="bildr.png"/>

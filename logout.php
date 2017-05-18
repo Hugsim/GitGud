@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="stylebuttons.css">
+		<link rel="stylesheet" href="styleauthsvar.css">
+    </head>
+    <body class="body">
+
 <?php 
 function logout(){
     echo "Du har loggat ut!<br>";
@@ -9,3 +18,7 @@ function logout(){
 logout();
 
  ?>
+
+    <img class="logo" src="bildr.png"/>
+ </body>
+</html>

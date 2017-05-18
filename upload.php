@@ -104,6 +104,7 @@
             }
 
 		?>		
+        <img class="logo" src="bildr.png"/>
 	</body>
 </html>
 
