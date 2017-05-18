@@ -47,36 +47,36 @@
                 if(isset($_POST["submit"])) {
                     $check = getimagesize($_FILES["image"]["tmp_name"]);
                     if($check !== false) {
-                        echo "File is an image - " . $check["mime"] . ".";
+                        echo "<h2>File is an image - " . $check["mime"] . ".</h2>";
                         $uploadOk = 1;
                     } else {
-                        echo "File is not an image.";
+                        echo "<h2>File is not an image.</h2>";
                         $uploadOk = 0;
                     }
                 }
                 // Check file size
                 if ($_FILES["image"]["size"] > 1999999) {
-                    echo "Sorry, your file is too large.";
+                    echo "<h2>Sorry, your file is too large.</h2>";
                     $uploadOk = 0;
                 }
                 // Check if $uploadOk is set to 0 by an error
                 if ($uploadOk == 0) {
-                    echo "Sorry, your file was not uploaded.";
+                    echo "<h2>Sorry, your file was not uploaded.</h2>";
                 // if everything is ok, try to upload file
                 } else {
                     if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-                        echo "The file ". basename( $_FILES["image"]["name"]). " has been uploaded.";
+                        echo "<h2>The file ". basename( $_FILES["image"]["name"]). " has been uploaded.</h2>";
                     } else {
-                        echo "Din bild är för stor!";
+                        echo "<h2>Din bild är för stor!</h2>";
                     }
                 }
-                echo " Det funka!";
+                echo "<h2>Det funka!</h2>";
                 $sql = "INSERT INTO imagedata VALUES ('".$newimageid."','". $_POST["title"] ."', '". $_POST["description"] ."', '". $_SESSION["userid"] ."', '". date("Y-m-d H:i:s") ."', true);"; //to do, make säker, förklara vad du vill göra /hugo
                 //$result = $conn->query($sql);
                 $svar = mysqli_query($conn, $sql);
                 echo $svar;
-                echo "Bilden finns nu i databasen! <br>";
-                echo '<a href="allimages.php">Kolla alla bilder här!</a>';
+                echo "<h2>Bilden finns nu i databasen!</h2> <br>";
+                echo '<a href="allimages.php"><h2>Kolla alla bilder här!</h2></a>';
 			}
         }
         else {

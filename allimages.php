@@ -25,7 +25,7 @@
             }
 
             $conn->set_charset("utf8");
-            $sql = "SELECT bildid From imagedata";
+            $sql = "SELECT bildid From imagedata ORDER BY time DESC";
             $result = $conn->query($sql);
 
 
@@ -33,6 +33,7 @@
                 die(mysqli_error($conn)); 
             }
             elseif ($result->num_rows > 0) {
+                echo '<a href="auth_SVAR.php"><h2>Tillbaka</h2></a>';
                 echo '<div class="lastImages">';
 				while($row = $result->fetch_assoc()) {
                     $src = "images/".$row["bildid"];
