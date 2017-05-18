@@ -76,11 +76,11 @@
 								<ul>
 									<li>
 										<label>Välj fil:</label>
-										<input type="file" name="image" accept="image/*">
+										<input type="file" name="image" accept="image/*" required>
 									</li>
 									<li>
 										<label>Titel:</label>
-										<input type="text" name="title">
+										<input type="text" name="title" required>
 									</li>
 									<li class="inline">
 										<label class="inline">Private:</label>
