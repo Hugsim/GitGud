@@ -72,7 +72,6 @@
                 }
                 echo "<h2>Det funka!</h2>";
                 $sql = "INSERT INTO imagedata VALUES ('".$newimageid."','". $_POST["title"] ."', '". $_POST["description"] ."', '". $_SESSION["userid"] ."', '". date("Y-m-d H:i:s") ."', ".$_POST["radio"].");"; //to do, make säker, förklara vad du vill göra /hugo
-                //$result = $conn->query($sql);
                 $svar = mysqli_query($conn, $sql);
                 echo "<h2>Bilden finns nu i databasen! </h2> <br>";
                 echo '<a href="allimages.php"><h2>Kolla alla bilder här!</h2></a>';
