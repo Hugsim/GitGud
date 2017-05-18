@@ -53,6 +53,7 @@
         					</div>
 							';
 						echo '<form action="upload.php" id="upload" class="form" method="post" enctype="multipart/form-data">
+								<input type="hidden" name="MAX_FILE_SIZE" value="1999999" />
 								<ul>
 									<li>
 										<label>Välj fil:</label>
