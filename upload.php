@@ -39,9 +39,6 @@
 				}
                 $newimageid = checkimageid($imageids, $newimageid);
 
-
-
-
                 $target_dir = "images/";
                 $target_file = $target_dir . basename($newimageid);
                 $uploadOk = 1;
@@ -73,10 +70,6 @@
                         echo "Din bild är för stor!";
                     }
                 }
-
-
-
-
                 echo " Det funka!";
                 $sql = "INSERT INTO imagedata VALUES ('".$newimageid."','". $_POST["title"] ."', '". $_POST["description"] ."', '". $_SESSION["userid"] ."', '". date("Y-m-d H:i:s") ."', true);"; //to do, make säker, förklara vad du vill göra /hugo
                 //$result = $conn->query($sql);
