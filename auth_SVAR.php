@@ -53,7 +53,6 @@
 				if ($_SESSION["loginT"])
 				{
 					$loginT = true;
-						echo '<a href="logout.php">Logga ut!</a>';
 						echo '<p class="welcome">Welcome ' . $_SESSION["username"]. '!</p>';
 						echo '
 							<div class="button-row">
