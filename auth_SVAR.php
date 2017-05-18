@@ -9,11 +9,13 @@
     <body class="body">
 		<?php
 		session_start();
-		if ((!isset($_POST["user"]) or !isset($_POST["pass"]))) //&& !$_SESSION["loginT"] )
+		if ((!isset($_POST["user"]) or !isset($_POST["pass"])) && (!isset($_SESSION["loginT"])))
 		{
 			header("Location: login.html");
 			die();
 		}
+		if (isset($_POST["user"]) && isset($_POST["pass"]))
+		{
 			$servername = "localhost";
 			$username = "root";
 			$password = "";
@@ -42,6 +44,15 @@
 						$_SESSION["username"] = $row["username"];
 						$_SESSION["password"] = $row["password"];
 						$_SESSION["userid"] = $row["userid"];
+						$loginT = true;
+						$_SESSION["loginT"] = true;
+					}
+				}
+			}
+		}
+				if ($_SESSION["loginT"])
+				{
+					$loginT = true;
 						echo '<a href="logout.php">Logga ut!</a>';
 						echo '<p class="welcome">Welcome ' . $_SESSION["username"]. '!</p>';
 						echo '
@@ -76,21 +87,18 @@
 								</ul>
                       		<input type="submit">
                   		</form>';
-						$loginT = true;
-						$_SESSION["loginT"] = true;
+						
 					}
-				}
+
 				if (!$loginT) {
 					echo "Wrong login!";
 					$_SESSION["loginT"] = false;
 					session_unset();
-				}
-			}
-				
-			else {
+				}				
+			/*else {
 				echo "Wrong login information!";
 			session_unset();
-			}
+			}*/
 		
 		?>
 		
