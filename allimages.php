@@ -25,7 +25,7 @@
             }
 
             $conn->set_charset("utf8");
-            $sql = "SELECT bildid From imagedata ORDER BY time DESC";
+            $sql = "SELECT bildid, private From imagedata ORDER BY time DESC";
             $result = $conn->query($sql);
 
 
@@ -37,7 +37,8 @@
                 echo '<div class="lastImages">';
 				while($row = $result->fetch_assoc()) {
                     $src = "images/".$row["bildid"];
-                    echo '<div class="image"><img src="'.$src.'"/></div>';
+                    if(!$row["private"])
+                        echo '<div class="image"><img src="'.$src.'"/></div>';
 				}
                 echo '</div>';
 			}

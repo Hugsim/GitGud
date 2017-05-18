@@ -4,7 +4,6 @@
         <meta charset="utf-8"/>
         <link rel="stylesheet" href="stylebuttons.css">
 		<link rel="stylesheet" href="styleauthsvar.css">
-		<script type = "text/javascript" src = "script1.js"></script>
     </head>
     <body class="body">
 		<?php
