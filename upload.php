@@ -70,7 +70,7 @@
                     if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
                         echo "The file ". basename( $_FILES["image"]["name"]). " has been uploaded.";
                     } else {
-                        echo "Sorry, there was an error uploading your file.";
+                        echo "Din bild är för stor!";
                     }
                 }
 
@@ -83,7 +83,7 @@
                 $svar = mysqli_query($conn, $sql);
                 echo $svar;
                 echo "Bilden finns nu i databasen! <br>";
-                echo '<a href="login.html">Logga in här!</a>';
+                echo '<a href="allimages.php">Kolla alla bilder här!</a>';
 			}
         }
         else {
