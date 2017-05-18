@@ -70,7 +70,6 @@
                         echo "<h2>Din bild är för stor!</h2>";
                     }
                 }
-                echo "<h2>Det funka!</h2>";
                 $sql = "INSERT INTO imagedata VALUES ('".$newimageid."','". $_POST["title"] ."', '". $_POST["description"] ."', '". $_SESSION["userid"] ."', '". date("Y-m-d H:i:s") ."', ".$_POST["radio"].");"; //to do, make säker, förklara vad du vill göra /hugo
                 $svar = mysqli_query($conn, $sql);
                 echo "<h2>Bilden finns nu i databasen! </h2> <br>";
