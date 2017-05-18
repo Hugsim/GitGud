@@ -56,7 +56,7 @@
 								<ul>
 									<li>
 										<label>Välj fil:</label>
-										<input type="file" name="pic" accept="image/*">
+										<input type="file" name="image" accept="image/*">
 									</li>
 									<li>
 										<label>Titel:</label>
