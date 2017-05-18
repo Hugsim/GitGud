@@ -23,7 +23,7 @@
                 die("Connection failed: " . $conn->connect_error);
             }
 
-            //$sql = "INSERT INTO `imagedata`(`bildid`, `title`, `description`, `uploaderid`, `time`, `private`) VALUES (,,,,,);";
+            $conn->set_charset("utf8");
             $sql = "SELECT bildid From imagedata";
             $result = $conn->query($sql);
 
@@ -40,11 +40,11 @@
                 $newimageid = checkimageid($imageids, $newimageid);
 
                 echo " Det funka!";
-                $sql = "INSERT INTO imagedata VALUES ('".$newimageid."','". $_POST["title"] ."', '". $_POST["description"] ."', '". $_SESSION["userid"] ."', ". date("Y-m-d H:i:s") .", true);"; //to do, make säker, förklara vad du vill göra /hugo
+                $sql = "INSERT INTO imagedata VALUES ('".$newimageid."','". $_POST["title"] ."', '". $_POST["description"] ."', '". $_SESSION["userid"] ."', '". date("Y-m-d H:i:s") ."', true);"; //to do, make säker, förklara vad du vill göra /hugo
                 //$result = $conn->query($sql);
                 $svar = mysqli_query($conn, $sql);
                 echo $svar;
-                echo "Bilden finns nu i databasen! ";
+                echo "Bilden finns nu i databasen! <br>";
                 echo '<a href="login.html">Logga in här!</a>';
 			}
         }
