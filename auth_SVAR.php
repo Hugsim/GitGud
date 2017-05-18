@@ -50,7 +50,7 @@
 			}
 		}
 		if (!isset($_SESSION["loginT"])){
-			header("Location: login.html");
+			header("Location: logout.php");
 			die();
 		}
 				if ($_SESSION["loginT"])
@@ -59,7 +59,7 @@
 						echo '<p class="welcome">Welcome ' . $_SESSION["username"]. '!</p>';
 						echo '
 							<div class="button-row">
-            					<div class="button"> <a href="signup.html" class="animated-button sign-in">Privata Bilder</a> </div>
+            					<div class="button"> <a href="privateimages.php" class="animated-button sign-in">Privata Bilder</a> </div>
             					<div class="button"> <a href="allimages.php" class="animated-button login ">Public bilder</a> </div>
 								<div class="button"> <a href="#upload" class="animated-button upload ">Ladda upp</a> </div>
 								<div class="button"> <a href="logout.php" class="animated-button logout ">Logga ut</a> </div>
