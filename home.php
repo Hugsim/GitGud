@@ -57,11 +57,12 @@
                 echo '<div class="lastImages">';
 				while($row = $result->fetch_assoc()) {
                     $src = "images/".$row["bildid"];
-                    if(!$row["private"])
+                    if(!$row["private"]){
                         echo '<div class="image"><img src="'.$src.'"/>
                             <p class="title">'.$row["title"].'</p>
                             <p class="de">'.$row["description"].'</p>
                         </div>';
+                    }
 				}
                 echo '</div>';
 			}
