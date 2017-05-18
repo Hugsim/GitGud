@@ -13,15 +13,17 @@
     <!--<div class="lastImages">
         <div class="image">
             <img src="images/bH729k"/>
+            <p class="title">Titeln</p>
+            <p class="de">här är en lite längre text</p>
         </div>
         <div class="image">
             <img src="images/bH729k"/>
         </div>
         <div class="image">
             <img src="images/bH729k"/>
-        </div>-->                                                          <!-- Att göra: Dynamiskt hämta senaste bilderna -->
-        <!--<div class="image">
-            <img src="images/bH729k"/>
+        </div>                                                          Att göra: Dynamiskt hämta senaste bilderna 
+        <div class="image">             
+            <img src="images/bH729k"/>                                  Gjort
         </div>
         <div class="image">
             <img src="images/bH729k"/>
@@ -44,7 +46,7 @@
             }
 
             $conn->set_charset("utf8");
-            $sql = "SELECT bildid, private From imagedata ORDER BY time DESC";
+            $sql = "SELECT bildid, title, description, private From imagedata ORDER BY time DESC";
             $result = $conn->query($sql);
 
 
@@ -56,7 +58,10 @@
 				while($row = $result->fetch_assoc()) {
                     $src = "images/".$row["bildid"];
                     if(!$row["private"])
-                        echo '<div class="image"><img src="'.$src.'"/></div>';
+                        echo '<div class="image"><img src="'.$src.'"/>
+                            <p class="title">'.$row["title"].'</p>
+                            <p class="de">'.$row["description"].'</p>
+                        </div>';
 				}
                 echo '</div>';
 			}
