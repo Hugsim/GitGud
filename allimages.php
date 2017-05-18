@@ -4,6 +4,7 @@
         <meta charset="utf-8"/>
         <link rel="stylesheet" href="stylebuttons.css">
 		<link rel="stylesheet" href="styleauthsvar.css">
+        <link rel="stylesheet" href="stylesheetLastImages.css">
     </head>
     <body class="body">
 		<?php
@@ -27,32 +28,24 @@
             $sql = "SELECT bildid From imagedata";
             $result = $conn->query($sql);
 
-            $newimageid = base_convert(rand(0, 1679615), 10, 36);
-            $imageids = array();
 
             if ($result === false) {
                 die(mysqli_error($conn)); 
             }
             elseif ($result->num_rows > 0) {
+                echo '<div class="lastImages">';
 				while($row = $result->fetch_assoc()) {
-                    array_push($imageids, $row["bildid"]);
+                    $src = "images/".$row["bildid"];
+                    echo '<div class="image"><img src="'.$src.'"/></div>';
 				}
-                $newimageid = checkimageid($imageids, $newimageid);
-
-                echo " Det funka!";
-                $sql = "INSERT INTO imagedata VALUES ('".$newimageid."','". $_POST["title"] ."', '". $_POST["description"] ."', '". $_SESSION["userid"] ."', '". date("Y-m-d H:i:s") ."', true);"; //to do, make säker, förklara vad du vill göra /hugo
-                //$result = $conn->query($sql);
-                $svar = mysqli_query($conn, $sql);
-                echo $svar;
-                echo "Bilden finns nu i databasen! <br>";
-                echo '<a href="login.html">Logga in här!</a>';
+                echo '</div>';
 			}
         }
         else {
             header("Location: login.html");
             die();
         }
-        
+
         ?>		
 	</body>
 </html>

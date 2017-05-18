@@ -47,7 +47,7 @@
 						echo '
 							<div class="button-row">
             					<div class="button"> <a href="signup.html" class="animated-button sign-in">Privata Bilder</a> </div>
-            					<div class="button"> <a href="login.html" class="animated-button login ">Public bilder</a> </div>
+            					<div class="button"> <a href="allimages.php" class="animated-button login ">Public bilder</a> </div>
 								<div class="button"> <a href="#upload" class="animated-button upload ">Ladda upp</a> </div>
 								<div class="button"> <a href="logout.php" class="animated-button logout ">Logga ut</a> </div>
         					</div>
