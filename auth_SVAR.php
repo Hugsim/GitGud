@@ -84,9 +84,9 @@
 									</li>
 									<li class="inline">
 										<label class="inline">Private:</label>
-										<input class="inline" type="radio" name="radio" checked> 
+										<input class="inline" type="radio" name="radio" value="true" checked> 
 										<label class="inline">Public:</label>
-										<input class="inline" type="radio" name="radio"> 
+										<input class="inline" type="radio" name="radio" value="false"> 
 									</li>
 									<li>
 										<label>Description:</label>
