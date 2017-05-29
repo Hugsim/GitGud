@@ -36,7 +36,7 @@
 			$_SESSION["loginT"] = false;
 
 			if ($result === false) {
-				die(mysqli_error($conn)); 
+				die(mysqli_error($conn));
 			}
 			elseif ($result->num_rows > 0) {
 				while($row = $result->fetch_assoc()) {
@@ -49,9 +49,9 @@
 					}
 				}
 				if(!$loginT){
+					header('HTTP/1.1 401 Unauthorized');
 					echo "<h2>Fel inloggnigsuppgifter</h2> <br>";
 					echo '<a href="login.html"><h2>Logga in igen!</h2></a>';
-					$_SESSION["loginT"] = false;
 				}
 			}
 		}
@@ -100,7 +100,6 @@
 
 				if (!$loginT) {
 					echo "Wrong login!";
-					$_SESSION["loginT"] = false;
 					session_unset();
 				}				
 			/*else {
