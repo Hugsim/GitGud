@@ -4,6 +4,7 @@
         <meta charset="utf-8"/>
         <link rel="stylesheet" href="stylebuttons.css">
 		<link rel="stylesheet" href="styleauthsvar.css">
+		<link rel="stylesheet" href="styleauthsvar.css">
     </head>
     <body class="body">
 		<?php
@@ -49,26 +50,26 @@
                 $newuserid = checkuserid($userids, $newuserid);
                 //echo $newuserid;
                 if($_POST["pass"] != $_POST["pass2"]){
-                    echo "Dina lösenord stämmer inte överens! ";
-                    echo '<a href="signup.html">Testa igen här</a>';
+                    echo "<h2>Dina lösenord stämmer inte överens! </h2>";
+                    echo '<a href="signup.html"><h2>Testa igen här</h2></a>';
                 }
                 elseif (!$duplicate) {
                     echo " Det funka!";
                     $sql = "INSERT INTO userdata VALUES ('".$newuserid."','". $_POST["user"] ."', '". $_POST["pass"] ."', '". $_POST["email"] ."');"; //to do, make säker, förklara vad du vill göra /hugo
                     $result = $conn->query($sql);
                     //mysqli_query($conn, $sql);
-                    echo "Användaren '".$_POST["user"]."' finns nu i databasen! ";
-                    echo '<a href="login.html">Logga in här!</a>';
+                    echo "<h2>Användaren '".$_POST["user"]."' finns nu i databasen! </h2>";
+                    echo '<a href="login.html"><h2>Logga in här!</h2></a>';
 				}
                 else{
-                    echo "Användarnamn upptaget!  ";
-                    echo '<a href="signup.html">Testa igen här</a>';
+                    echo "<h2>Användarnamn upptaget!  </h2>";
+                    echo '<a href="signup.html"><h2>Testa igen här</h2></a>';
                 }
 
 			}
 				
 			else {
-				echo "Wrong login information!";
+				echo "<h2>Wrong login information!</h2>";
 			session_unset();
 			}
             function checkuserid($db, $co){
